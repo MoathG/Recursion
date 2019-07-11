@@ -257,11 +257,11 @@ multiplication2(7,6) =>  42
 
 function multiplication2(x,y)
 {
-    var sum= 0;
+    var sum = 0;
 
-    while (y>0) {
-        sum=sum+x;
-        y=y-1;
+    while (y > 0) {
+        sum = sum + x;
+        y = y - 1;
     }
 
     return sum
@@ -358,6 +358,18 @@ fibon(n): 1 1 2 3 5 8 13 21
 n:        0 1 2 3 4 5  6  7
 */
 
+function fibon(x) {
+    
+    var fibo = '';
+
+    while ('') {
+        
+    }
+
+    return fibo;
+}
+
+
 
 /*
 2
@@ -371,6 +383,22 @@ mirror("school") => "loohcs"
 mirror("car") => "rac"
 mirror("maDrasa") => "asarDam"
 */
+
+function mirror(str) {
+    
+    var backWord = '';
+
+    while (str.length > 0) {
+        
+        backWord = backWord + str.slice(str.length -1);
+
+        str = str.slice(0, str.length-1)
+
+    }
+
+    return backWord;
+}
+
 
 
 
@@ -387,6 +415,25 @@ mirrorCaseAlso("sChOol") => "LOoHcS"
 mirrorCaseAlso("THOR") => "roht"
 mirrorCaseAlso("BaBa") => "AbAb"
 */
+
+function mirrorCaseAlso(x) {
+    var backWord = '';
+
+    while (x.length > 0) {
+        if ( x.slice(x.length -1) === x.slice(x.length -1).toLowerCase() ) {
+            backWord = x.slice(x.length -1);
+            backWord = backWord.toUpperCase();
+        } else if ( x.slice(x.length -1) === x.slice(x.length -1).toUpperCase()) {
+            backWord = x.slice(x.length -1);
+            backWord = backWord.toLowerCase();
+        }
+        
+        x = x.slice(0, x.length-1)
+
+    }
+
+    return backWord;
+}
 
 
 
