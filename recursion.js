@@ -358,9 +358,11 @@ function repeatChar (x, y) {
   return 0
   }
   
-  if( y ===  x.slice(x.length-1)) {
+  if( y.toLowerCase ===  x.slice(x.length-1)) {
     return 1 + repeatChar (x.slice(0 , x.length-1), y)
-  } else
+  } else if (y.toUpperCase ===  x.slice(x.length-1)) {
+    return 1 + repeatChar (x.slice(0 , x.length-1), y)
+  }
     return 0 + repeatChar (x.slice(0 , x.length-1), y)
 }
 
@@ -385,10 +387,14 @@ try more case by yourself
 
 function repeatChar2 (x, y) {
 
-  if (x.slice(x.length-1) === y) {
-    return y.length;
+  if (x.length === 0) {
+  return 0
   }
-  return repeatChar2(x.slice(0 , x.length-1))
+  
+  if( y ===  x.slice(x.length-1)) {
+    return 1 + repeatChar2 (x.slice(0 , x.length-1), y)
+  } else
+    return 0 + repeatChar2 (x.slice(0 , x.length-1), y)
 }
 
 
